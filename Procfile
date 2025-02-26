@@ -1,2 +1,2 @@
 
-web: gunicorn cmsbackend.wsgi --log-file -
+web: gunicorn config.wsgi:application --log-file -
