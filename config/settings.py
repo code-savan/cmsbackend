@@ -15,6 +15,8 @@ import os
 from dotenv import load_dotenv
 import sys
 from datetime import timedelta
+import os
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 load_dotenv()
 
@@ -31,6 +33,10 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'django-insecure-lpz(6d#v(vyz43gbo8u
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
